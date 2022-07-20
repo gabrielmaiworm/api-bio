@@ -31,6 +31,9 @@ public class Evaluation {
 	@Column(name = "user_name")
 	private String userName; //nome do usuario biomob plus
 	
+	@Column(name = "comentario")
+	private String comentario; //comentario biomob plus
+	
 	@Column(name = "internal_circulation")
 	@Enumerated(EnumType.STRING)
 	private ValuesType internalCirculation; //circulacão interna - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
