@@ -19,6 +19,15 @@ public class User {
 	@Column(name = "name")
 	private String name;
 	
+	@Column(name = "cpf")
+	private String cpf;
+	
+	@Column(name = "telefone")
+	private String telefone;
+	
+	@Column(name = "deficiencia")
+	private String deficiencia;
+	
 	@Column(name = "password")
 	private String password;
 
