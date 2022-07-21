@@ -28,6 +28,10 @@ public class User {
 	@Column(name = "deficiencia")
 	private String deficiencia;
 	
+	@Column(columnDefinition="TEXT" ,name = "foto")
+	private String foto;
+	
+	
 	@Column(name = "password")
 	private String password;
 
