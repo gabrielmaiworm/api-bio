@@ -31,6 +31,9 @@ public class Evaluation {
 	@Column(name = "user_name")
 	private String userName; //nome do usuario biomob plus
 	
+	@Column(name= "user_image")
+	private String user_image;
+	
 	@Column(name = "comentario")
 	private String comentario; //comentario biomob plus
 	

@@ -31,7 +31,6 @@ public class User {
 	@Column(columnDefinition="TEXT" ,name = "foto")
 	private String foto;
 	
-	
 	@Column(name = "password")
 	private String password;
 
