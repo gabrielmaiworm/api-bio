@@ -38,6 +38,10 @@ public class LoginController {
 			return ResponseEntity.ok()
 					.body(user.get());
 		}
+		if(!userBody.getPassword().equals(user.get().getPassword())) {
+			return ResponseEntity.badRequest().build();
+					
+		}
 		return null;
 			
 		}
