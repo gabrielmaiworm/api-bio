@@ -1,5 +1,6 @@
 package br.com.biomob.restcontroller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,16 +26,24 @@ public class LoginController {
 		return userRepository.save(user);
 	}
 	
-	@GetMapping("/user/login")
-	public ResponseEntity<User> login(@RequestBody User user) {
+	@PostMapping("/user/login")
+	public ResponseEntity<User> login(@RequestBody User userBody) {
 		
-		Optional<User> opt = userRepository.findById(user.getEmail());
-		if(opt.isEmpty()) {
+		Optional<User> user = userRepository.findById(userBody.getEmail());
+		
+		if(user.isEmpty()) {
 			return ResponseEntity.notFound().build();
 		}
-		
-		return ResponseEntity.ok()
-				.body(opt.get());
+		if(userBody.getPassword().equals(user.get().getPassword())) {
+			return ResponseEntity.ok()
+					.body(user.get());
+		}
+		return null;
+			
+		}
+	@GetMapping("/user/list")
+	public ResponseEntity<List<User>> listarTodos() {
+		return ResponseEntity.ok(userRepository.findAll());
 	}
-
+		
 }
