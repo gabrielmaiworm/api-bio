@@ -73,7 +73,8 @@ public class Evaluation {
 	@Column(name = "audio_menu")
 	private Boolean audioMenu; //cardapio com audio - Resultados possiveis: true | false
 	
+	
 	@Column(name = "star")
-	private String star; //nota
+	private Double star; //nota
 	
 }
