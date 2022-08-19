@@ -2,12 +2,9 @@ package br.com.biomob.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import br.com.biomob.model.evaluation.ValuesType;
 import lombok.Data;
 
 @Data

@@ -1,5 +1,6 @@
 package br.com.biomob.service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,6 +90,8 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			
 			place.setBiomobEvaluation(findBiomobEvaluation(result.getPlace_id()));
 			
+			place.setBiomobStarAverage(starAverageCalculator(place.getBiomobEvaluation()));
+			
 			biomobPlacesReturn.getPlaces().add(place);
 		}
 		
@@ -96,6 +99,21 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		biomobPlacesReturn.getPage().setNextPageToken(googleResponse.getNext_page_token());
 		
 		return biomobPlacesReturn;
+	}
+
+	private Double starAverageCalculator(List<Evaluation> biomobEvaluation) {
+		
+		int count = 0;
+		double total = 0;
+		
+		for (Evaluation evaluation : biomobEvaluation) {
+			count++;
+			total = total + evaluation.getStar();
+		}
+		
+		String average = String.valueOf(total / count);
+		
+		return Double.valueOf(average.substring(0, 3));
 	}
 
 	private List<Evaluation> findBiomobEvaluation(String place_id) {

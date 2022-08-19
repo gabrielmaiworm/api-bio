@@ -13,5 +13,7 @@ public class Place {
 	private GoogleResult googleFields = new GoogleResult();
 
 	private List<Evaluation> biomobEvaluation = new ArrayList<>();
+	
+	private Double biomobStarAverage;
 
 }
