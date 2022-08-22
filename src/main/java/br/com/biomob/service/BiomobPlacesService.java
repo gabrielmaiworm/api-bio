@@ -111,16 +111,16 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			total = total + evaluation.getStar();
 		}
 		
-		if (count == 0) {
+	
+		
+		Double average = (total / count);
+		if (average.isNaN()) {
 			return null;
 		} else {
-		
-		
-		String average = String.valueOf(total / count);
-		
-		return Double.valueOf(average.substring(0, 3));
+		return average;
 		}
-	}
+		}
+	
 
 	private List<Evaluation> findBiomobEvaluation(String place_id) {
 		return evaluationRepository.findByPlaceId(place_id);
