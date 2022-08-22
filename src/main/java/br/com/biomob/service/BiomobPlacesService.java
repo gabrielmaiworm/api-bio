@@ -111,13 +111,14 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			total = total + evaluation.getStar();
 		}
 
+		DecimalFormat formato = new DecimalFormat("#.##");      
 		
 		Double average = (total / count);
 		if (average.isNaN()) {
 			return null;
 		} else {
-		return average;
-			}
+			
+		return average = Double.valueOf(formato.format(average));			}
 		}
 
 
