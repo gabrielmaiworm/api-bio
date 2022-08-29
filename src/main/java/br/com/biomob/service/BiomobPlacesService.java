@@ -111,7 +111,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			total = total + evaluation.getStar();
 			
 		}
+
+		DecimalFormat formato = new DecimalFormat("#.##");      
 		
+
 		if (count == 0) {
 			return null; 
 		}
@@ -123,6 +126,8 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		return Double.valueOf(average.substring(0, 3));
 		}
 	}
+
+		
 
 	private List<Evaluation> findBiomobEvaluation(String place_id) {
 		return evaluationRepository.findByPlaceId(place_id);

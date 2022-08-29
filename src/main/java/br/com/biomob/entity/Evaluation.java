@@ -34,10 +34,13 @@ public class Evaluation {
 	private String userName; //nome do usuario biomob plus
 	
 	@Column(name= "user_image")
-	private String user_image;
+	private String user_image; //avatar usuario
 	
 	@Column(name = "comentario")
-	private String comentario; //comentario biomob plus
+	private String comentario; //comentario 
+	
+	@Column(name = "data")
+	private String data; //data 
 	
 	@Column(name = "internal_circulation")
 	@Enumerated(EnumType.STRING)
@@ -78,7 +81,6 @@ public class Evaluation {
 	@Column(name = "star")
 	private Double star; //nota
 	
-	@Column(name = "data")
-	private String data; //data
+
 	
 }
