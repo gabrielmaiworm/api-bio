@@ -109,18 +109,25 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		for (Evaluation evaluation : biomobEvaluation) {
 			count++;
 			total = total + evaluation.getStar();
+			
 		}
 
 		DecimalFormat formato = new DecimalFormat("#.##");      
 		
-		Double average = (total / count);
-		if (average.isNaN()) {
-			return null;
-		} else {
-			
-		return average = Double.valueOf(formato.format(average));			}
-		}
 
+		if (count == 0) {
+			return null; 
+		}
+		
+		else {
+		
+		String average = String.valueOf(total / count);
+		
+		return Double.valueOf(average.substring(0, 3));
+		}
+	}
+
+		
 
 	private List<Evaluation> findBiomobEvaluation(String place_id) {
 		return evaluationRepository.findByPlaceId(place_id);
