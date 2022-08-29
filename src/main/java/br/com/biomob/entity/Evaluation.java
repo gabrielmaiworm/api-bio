@@ -40,7 +40,7 @@ public class Evaluation {
 	private String comentario; //comentario 
 	
 	@Column(name = "data")
-	private Date data; //data 
+	private String data; //data 
 	
 	@Column(name = "internal_circulation")
 	@Enumerated(EnumType.STRING)
