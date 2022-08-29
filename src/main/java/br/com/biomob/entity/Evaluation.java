@@ -1,5 +1,7 @@
 package br.com.biomob.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -32,10 +34,13 @@ public class Evaluation {
 	private String userName; //nome do usuario biomob plus
 	
 	@Column(name= "user_image")
-	private String user_image;
+	private String user_image; //avatar usuario
 	
 	@Column(name = "comentario")
-	private String comentario; //comentario biomob plus
+	private String comentario; //comentario 
+	
+	@Column(name = "data")
+	private Date data; //data 
 	
 	@Column(name = "internal_circulation")
 	@Enumerated(EnumType.STRING)
