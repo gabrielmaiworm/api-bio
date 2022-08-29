@@ -79,6 +79,6 @@ public class Evaluation {
 	private Double star; //nota
 	
 	@Column(name = "data")
-	private Date data; //data
+	private String data; //data
 	
 }
