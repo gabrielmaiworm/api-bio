@@ -42,41 +42,47 @@ public class Evaluation {
 	@Column(name = "data")
 	private Date data; //data 
 	
-	@Column(name = "internal_circulation")
-	@Enumerated(EnumType.STRING)
-	private ValuesType internalCirculation; //circulacão interna - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "internal_circulation")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType internalCirculation; //circulacão interna - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "parking")
-	@Enumerated(EnumType.STRING)
-	private ValuesType parking; //estacionamento - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "parking")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType parking; //estacionamento - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "sidewalk")
-	@Enumerated(EnumType.STRING)
-	private ValuesType sidewalk; //calcada - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "sidewalk")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType sidewalk; //calcada - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "audio_visual")
-	@Enumerated(EnumType.STRING)
-	private ValuesType audioVisual; //audio/visual - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "audio_visual")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType audioVisual; //audio/visual - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "main_entrance")
-	@Enumerated(EnumType.STRING)
-	private ValuesType mainEntrance; //entrada principal - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "main_entrance")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType mainEntrance; //entrada principal - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "accessible_bathroom")
-	@Enumerated(EnumType.STRING)
-	private ValuesType accessibleBathroom; //banheiro acessivel - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
+	//@Column(name = "accessible_bathroom")
+	//@Enumerated(EnumType.STRING)
+	//private ValuesType accessibleBathroom; //banheiro acessivel - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
-	@Column(name = "wheelchair_access")
-	private Boolean wheelchairAccess; //acesso cadeira de rodas - Resultados possiveis: true | false
+	@Column(name = "circulacao_interna")
+	private Double circulacaoInterna; 
 	
-	@Column(name = "braille_menu")
-	private Boolean brailleMenu; //cardapio braile - Resultados possiveis: true | false
+	@Column(name = "estacionamento")
+	private Double estacionamento;
 	
-	@Column(name = "service_in_libras")
-	private Boolean serviceInLibras; //atendimento em libras - Resultados possiveis: true | false
+	@Column(name = "calcada")
+	private Double calcada;
 	
-	@Column(name = "audio_menu")
-	private Boolean audioMenu; //cardapio com audio - Resultados possiveis: true | false
+	@Column(name = "audioVisual")
+	private Double audioVisual;
+	
+	@Column(name = "entradaPrincipal")
+	private Double entradaPrincipal;
+	
+	@Column(name = "banheiroAcessivel")
+	private Double banheiroAcessivel;
 	
 	@Column(name = "star")
 	private Double star; //nota

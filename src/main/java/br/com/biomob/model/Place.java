@@ -14,6 +14,18 @@ public class Place {
 
 	private List<Evaluation> biomobEvaluation = new ArrayList<>();
 	
+	private Double biomobCirculacaoAverage;
+	
+	private Double biomobEstacionamentoAverage;
+	
+	private Double biomobCalcadaAverage;
+	
+	private Double biomobAudioVisualAverage;
+	
+	private Double biomobEntradaAverage;
+	
+	private Double biomobBanheiroAverage;
+	
 	private Double biomobStarAverage;
 
 }
