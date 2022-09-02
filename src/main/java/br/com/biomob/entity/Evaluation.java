@@ -1,7 +1,5 @@
 package br.com.biomob.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -40,7 +38,7 @@ public class Evaluation {
 	private String comentario; //comentario 
 	
 	@Column(name = "data")
-	private Date data; //data 
+	private String data; //data 
 	
 	//@Column(name = "internal_circulation")
 	//@Enumerated(EnumType.STRING)
