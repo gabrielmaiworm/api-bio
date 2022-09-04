@@ -73,13 +73,13 @@ public class Evaluation {
 	@Column(name = "calcada")
 	private Double calcada;
 	
-	@Column(name = "audioVisual")
+	@Column(name = "audio_visual")
 	private Double audioVisual;
 	
-	@Column(name = "entradaPrincipal")
+	@Column(name = "entrada_principal")
 	private Double entradaPrincipal;
 	
-	@Column(name = "banheiroAcessivel")
+	@Column(name = "banheiro_acessivel")
 	private Double banheiroAcessivel;
 	
 	@Column(name = "star")
