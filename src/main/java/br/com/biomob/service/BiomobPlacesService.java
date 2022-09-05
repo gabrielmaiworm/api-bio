@@ -134,7 +134,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 
 			}
 			if (contadorNA >= contadorCirculacao) {
-				return null;
+				return 2.0;
 			} else {
 				return 1.0;
 			}
