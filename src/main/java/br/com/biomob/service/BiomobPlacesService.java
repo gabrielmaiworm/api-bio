@@ -128,7 +128,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorCirculacao++;
 				}
 				
-				if (b == true) {
+				if (b) {
 					contadorNA++;
 				}
 
