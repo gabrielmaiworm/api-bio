@@ -121,7 +121,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		int contadorCirculacao = 0;
 
 			for ( Evaluation evaluation : biomobCirculacaoCount) {
-				var a = evaluation.getAudioVisual();
+				var a = evaluation.getCirculacaoInterna();
 				var b = evaluation.isCirculacaoInternaNA();
 				
 				if (a == 0 || a == 5) {
