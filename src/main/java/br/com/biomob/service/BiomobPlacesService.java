@@ -119,20 +119,20 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 	private Double circulacaoCount(List<Evaluation> biomobCirculacaoCount) {
 		int contadorNA = 0;
 		int contadorCirculacao = 0;
-		
-		Evaluation evaluation = new Evaluation();
-		
-			var variavel = evaluation.getAudioVisual();
-			var variavel2 = evaluation.isCirculacaoInternaNA();
-			
-			if (variavel == 0 || variavel == 5) {
-				contadorCirculacao++;
+
+			for ( Evaluation evaluation : biomobCirculacaoCount) {
+				var a = evaluation.getAudioVisual();
+				var b = evaluation.isCirculacaoInternaNA();
+				
+				if (a == 0 || a == 5) {
+					contadorCirculacao++;
+				}
+				
+				if (b == true) {
+					contadorNA++;
+				}
+
 			}
-			
-			if (variavel2 == true) {
-				contadorNA++;
-			}
-			
 			if (contadorNA >= contadorCirculacao) {
 				return null;
 			} else {
