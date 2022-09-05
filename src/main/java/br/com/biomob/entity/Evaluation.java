@@ -67,20 +67,38 @@ public class Evaluation {
 	@Column(name = "circulacao_interna")
 	private Double circulacaoInterna; 
 	
+	@Column(name = "circulacao_interna_na")
+	private Boolean circulacaoInternaNA; 
+	
 	@Column(name = "estacionamento")
 	private Double estacionamento;
+	
+	@Column(name = "estacionamento_na")
+	private Boolean estacionamentoNA;
 	
 	@Column(name = "calcada")
 	private Double calcada;
 	
+	@Column(name = "calcada_na")
+	private Boolean calcadaNA;
+	
 	@Column(name = "audio_visual")
 	private Double audioVisual;
+	
+	@Column(name = "audio_visual_na")
+	private Boolean audioVisualNA;
 	
 	@Column(name = "entrada_principal")
 	private Double entradaPrincipal;
 	
+	@Column(name = "entrada_principal_na")
+	private Boolean entradaPrincipalNA;
+	
 	@Column(name = "banheiro_acessivel")
 	private Double banheiroAcessivel;
+	
+	@Column(name = "banheiro_acessivel_na")
+	private Boolean banheiroAcessivelNA;
 	
 	@Column(name = "star")
 	private Double star; //nota
