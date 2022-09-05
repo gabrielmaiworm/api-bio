@@ -104,6 +104,9 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			
 			place.setBiomobBanheiroAverage(banheiroAverageCalculator(place.getBiomobEvaluation()));
 			
+			place.setBiomobCirculacaoCount(circulacaoCount(place.getBiomobEvaluation()));
+			
+			
 			biomobPlacesReturn.getPlaces().add(place);
 		}
 		
@@ -111,6 +114,30 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		biomobPlacesReturn.getPage().setNextPageToken(googleResponse.getNext_page_token());
 		
 		return biomobPlacesReturn;
+	}
+	
+	private Double circulacaoCount(List<Evaluation> biomobCirculacaoCount) {
+		int contadorNA = 0;
+		int contadorCirculacao = 0;
+		
+		Evaluation evaluation = new Evaluation();
+		
+			var variavel = evaluation.getAudioVisual();
+			var variavel2 = evaluation.isCirculacaoInternaNA();
+			
+			if (variavel == 0 || variavel == 5) {
+				contadorCirculacao++;
+			}
+			
+			if (variavel2 == true) {
+				contadorNA++;
+			}
+			
+			if (contadorNA >= contadorCirculacao) {
+				return null;
+			} else {
+				return 1.0;
+			}
 	}
 
 	private Double starAverageCalculator(List<Evaluation> biomobEvaluation) {

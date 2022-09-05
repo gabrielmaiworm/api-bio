@@ -102,6 +102,8 @@ public class Evaluation {
 	
 	@Column(name = "star")
 	private Double star; //nota
+
+	
 	
 
 	

@@ -27,5 +27,17 @@ public class Place {
 	private Double biomobBanheiroAverage;
 	
 	private Double biomobStarAverage;
+	
+	private Double biomobCirculacaoCount;
+	
+	private Double biomobEstacionamentoCount;
+	
+	private Double biomobCalcadaCount;
+	
+	private Double biomobAudioVisualCount;
+	
+	private Double biomobEntradaCount;
+	
+	private Double biomobBanheiroCount;
 
 }
