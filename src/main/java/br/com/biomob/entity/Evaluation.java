@@ -68,37 +68,37 @@ public class Evaluation {
 	private Double circulacaoInterna; 
 	
 	@Column(name = "circulacao_interna_na")
-	private Boolean circulacaoInternaNA; 
+	private boolean circulacaoInternaNA; 
 	
 	@Column(name = "estacionamento")
 	private Double estacionamento;
 	
 	@Column(name = "estacionamento_na")
-	private Boolean estacionamentoNA;
+	private boolean estacionamentoNA;
 	
 	@Column(name = "calcada")
 	private Double calcada;
 	
 	@Column(name = "calcada_na")
-	private Boolean calcadaNA;
+	private boolean calcadaNA;
 	
 	@Column(name = "audio_visual")
 	private Double audioVisual;
 	
 	@Column(name = "audio_visual_na")
-	private Boolean audioVisualNA;
+	private boolean audioVisualNA;
 	
 	@Column(name = "entrada_principal")
 	private Double entradaPrincipal;
 	
 	@Column(name = "entrada_principal_na")
-	private Boolean entradaPrincipalNA;
+	private boolean entradaPrincipalNA;
 	
 	@Column(name = "banheiro_acessivel")
 	private Double banheiroAcessivel;
 	
 	@Column(name = "banheiro_acessivel_na")
-	private Boolean banheiroAcessivelNA;
+	private boolean banheiroAcessivelNA;
 	
 	@Column(name = "star")
 	private Double star; //nota
