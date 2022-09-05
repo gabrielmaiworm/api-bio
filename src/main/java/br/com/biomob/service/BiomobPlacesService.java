@@ -106,6 +106,16 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			
 			place.setBiomobCirculacaoCount(circulacaoCount(place.getBiomobEvaluation()));
 			
+			place.setBiomobEstacionamentoCount(estacionamentoCount(place.getBiomobEvaluation()));
+			
+			place.setBiomobCalcadaCount(calcadaCount(place.getBiomobEvaluation()));
+			
+			place.setBiomobBanheiroCount(banheiroCount(place.getBiomobEvaluation()));
+			
+			place.setBiomobEntradaCount(entradaCount(place.getBiomobEvaluation()));
+			
+			place.setBiomobAudioVisualCount(audioVisualCount(place.getBiomobEvaluation()));
+			
 			
 			biomobPlacesReturn.getPlaces().add(place);
 		}
@@ -134,6 +144,126 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 
 			}
 			if (contadorNA >= contadorCirculacao) {
+				return 2.0;
+			} else {
+				return 1.0;
+			}
+	}
+	
+	private Double estacionamentoCount(List<Evaluation> biomobEstacionamentoCount) {
+		int contadorNA = 0;
+		int contadorEstacionamento = 0;
+
+			for ( Evaluation evaluation : biomobEstacionamentoCount) {
+				var a = evaluation.getEstacionamento();
+				var b = evaluation.isEstacionamentoNA();
+				
+				if (a == 0 || a == 5) {
+					contadorEstacionamento++;
+				}
+				
+				if (b) {
+					contadorNA++;
+				}
+
+			}
+			if (contadorNA >= contadorEstacionamento) {
+				return 2.0;
+			} else {
+				return 1.0;
+			}
+	}
+	
+	private Double calcadaCount(List<Evaluation> biomobCalcadaCount) {
+		int contadorNA = 0;
+		int contadorCalcada = 0;
+
+			for ( Evaluation evaluation : biomobCalcadaCount) {
+				var a = evaluation.getCalcada();
+				var b = evaluation.isCalcadaNA();
+				
+				if (a == 0 || a == 5) {
+					contadorCalcada++;
+				}
+				
+				if (b) {
+					contadorNA++;
+				}
+
+			}
+			if (contadorNA >= contadorCalcada) {
+				return 2.0;
+			} else {
+				return 1.0;
+			}
+	}
+	
+	private Double audioVisualCount(List<Evaluation> biomobAudioVisualCount) {
+		int contadorNA = 0;
+		int contadorAudioVisual = 0;
+
+			for ( Evaluation evaluation : biomobAudioVisualCount) {
+				var a = evaluation.getAudioVisual();
+				var b = evaluation.isAudioVisualNA();
+				
+				if (a == 0 || a == 5) {
+					contadorAudioVisual++;
+				}
+				
+				if (b) {
+					contadorNA++;
+				}
+
+			}
+			if (contadorNA >= contadorAudioVisual) {
+				return 2.0;
+			} else {
+				return 1.0;
+			}
+	}
+	
+	private Double entradaCount(List<Evaluation> biomobEntradaCount) {
+		int contadorNA = 0;
+		int contadorEntrada = 0;
+
+			for ( Evaluation evaluation : biomobEntradaCount) {
+				var a = evaluation.getEntradaPrincipal();
+				var b = evaluation.isEntradaPrincipalNA();
+				
+				if (a == 0 || a == 5) {
+					contadorEntrada++;
+				}
+				
+				if (b) {
+					contadorNA++;
+				}
+
+			}
+			if (contadorNA >= contadorEntrada) {
+				return 2.0;
+			} else {
+				return 1.0;
+			}
+	}
+	
+	private Double banheiroCount(List<Evaluation> biomobBanheiroCount) {
+		int contadorNA = 0;
+		int contadorBanheiroAcessivel = 0;
+
+			for ( Evaluation evaluation : biomobBanheiroCount) {
+				var a = evaluation.getBanheiroAcessivel();
+				var b = evaluation.isBanheiroAcessivelNA();
+				
+				if (a == 0 || a == 5) {
+					contadorBanheiroAcessivel++;
+				}
+				
+				if (b) {
+					contadorNA++;
+				}
+
+			}
+			if (contadorNA >= contadorBanheiroAcessivel) {
 				return 2.0;
 			} else {
 				return 1.0;
