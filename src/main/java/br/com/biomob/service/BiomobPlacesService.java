@@ -305,11 +305,12 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		int count = 0;
 		double total = 0;
 		
-		
 		for (Evaluation evaluation : biomobCirculacao) {
-			count++;
-			total = total + evaluation.getCirculacaoInterna();
 			
+			if(evaluation.getCirculacaoInterna() > 0) {
+				count++;
+				total = total + evaluation.getCirculacaoInterna();
+			}
 		}
 		
 
@@ -318,11 +319,6 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 
 		if (count == 0) {
 			return null; 
-		}
-		
-		else if(total == 0) {
-			return null;
-			
 		} else {
 		
 		String average = String.valueOf(total / count);
@@ -337,8 +333,11 @@ private Double estacionamentoAverageCalculator(List<Evaluation> biomobEstacionam
 		double total = 0;
 		
 		for (Evaluation evaluation : biomobEstacionamento) {
-			count++;
-			total = total + evaluation.getEstacionamento();
+			if(evaluation.getEstacionamento() > 0) {
+				count++;
+				total = total + evaluation.getEstacionamento();
+			}
+			
 			
 		}
 
@@ -347,11 +346,6 @@ private Double estacionamentoAverageCalculator(List<Evaluation> biomobEstacionam
 
 		if (count == 0) {
 			return null; 
-		}
-		
-		else if(total == 0) {
-			return null;
-			
 		} else {
 		
 		
@@ -367,9 +361,10 @@ private Double calcadaAverageCalculator(List<Evaluation> biomobCalcada) {
 	double total = 0;
 	
 	for (Evaluation evaluation : biomobCalcada) {
-		count++;
-		total = total + evaluation.getCalcada();
-		
+		if(evaluation.getCalcada() > 0) {
+			count++;
+			total = total + evaluation.getCalcada();
+		}
 	}
 
 	DecimalFormat formato = new DecimalFormat("#.##");      
@@ -377,14 +372,8 @@ private Double calcadaAverageCalculator(List<Evaluation> biomobCalcada) {
 
 	if (count == 0) {
 		return null; 
-	}
-	
-	else if(total == 0) {
-		return null;
-		
 	} else {
-	
-	
+
 	String average = String.valueOf(total / count);
 	
 	return Double.valueOf(average.substring(0, 3));
@@ -397,8 +386,10 @@ private Double audioVisualAverageCalculator(List<Evaluation> biomobAudioVisual) 
 	double total = 0;
 	
 	for (Evaluation evaluation : biomobAudioVisual) {
-		count++;
-		total = total + evaluation.getAudioVisual();
+		if(evaluation.getAudioVisual() > 0) {
+			count++;
+			total = total + evaluation.getAudioVisual();
+		}
 		
 	}
 
@@ -407,43 +398,34 @@ private Double audioVisualAverageCalculator(List<Evaluation> biomobAudioVisual) 
 
 	if (count == 0) {
 		return null; 
-	}
-	
-	else if(total == 0) {
-		return null;
-		
 	} else {
-	
-	
+
 	String average = String.valueOf(total / count);
 	
 	return Double.valueOf(average.substring(0, 3));
 	}
 }
 
-private Double entradaAverageCalculator(List<Evaluation> biomobEntrada) {
+	private Double entradaAverageCalculator(List<Evaluation> biomobEntrada) {
 	
-	int count = 0;
-	double total = 0;
-	
-	for (Evaluation evaluation : biomobEntrada) {
-		count++;
-		total = total + evaluation.getEntradaPrincipal();
+		int count = 0;
+		double total = 0;
 		
-	}
+		for (Evaluation evaluation : biomobEntrada) {
+			if(evaluation.getEntradaPrincipal() > 0) {
+				count++;
+				total = total + evaluation.getEntradaPrincipal();
+			}
+			
+			
+		}
 
 	DecimalFormat formato = new DecimalFormat("#.##");      
 	
 
 	if (count == 0) {
 		return null; 
-	}
-	
-	else if(total == 0) {
-		return null;
-		
 	} else {
-	
 	
 	String average = String.valueOf(total / count);
 	
@@ -457,8 +439,11 @@ private Double banheiroAverageCalculator(List<Evaluation> biomobBanheiro) {
 	double total = 0;
 	
 	for (Evaluation evaluation : biomobBanheiro) {
-		count++;
-		total = total + evaluation.getBanheiroAcessivel();
+		if(evaluation.getBanheiroAcessivel() > 0) {
+			count++;
+			total = total + evaluation.getBanheiroAcessivel();
+		}
+
 		
 	}
 
@@ -467,11 +452,6 @@ private Double banheiroAverageCalculator(List<Evaluation> biomobBanheiro) {
 
 	if (count == 0) {
 		return null; 
-	}
-	
-	else if(total == 0) {
-		return null;
-		
 	} else {
 	
 	String average = String.valueOf(total / count);
