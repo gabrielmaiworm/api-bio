@@ -40,62 +40,38 @@ public class Evaluation {
 	@Column(name = "data")
 	private String data; //data 
 	
-	//@Column(name = "internal_circulation")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType internalCirculation; //circulacão interna - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
-	//@Column(name = "parking")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType parking; //estacionamento - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
-	//@Column(name = "sidewalk")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType sidewalk; //calcada - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
-	//@Column(name = "audio_visual")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType audioVisual; //audio/visual - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
-	//@Column(name = "main_entrance")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType mainEntrance; //entrada principal - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
-	//@Column(name = "accessible_bathroom")
-	//@Enumerated(EnumType.STRING)
-	//private ValuesType accessibleBathroom; //banheiro acessivel - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
-	
 	@Column(name = "circulacao_interna")
-	private Double circulacaoInterna = 2.5; 
+	private Double circulacaoInterna = null; 
 	
 	@Column(name = "circulacao_interna_na")
 	private boolean circulacaoInternaNA; 
 	
 	@Column(name = "estacionamento")
-	private Double estacionamento = 2.5;
+	private Double estacionamento = null;
 	
 	@Column(name = "estacionamento_na")
 	private boolean estacionamentoNA;
 	
 	@Column(name = "calcada")
-	private Double calcada = 2.5;
+	private Double calcada = null;
 	
 	@Column(name = "calcada_na")
 	private boolean calcadaNA;
 	
 	@Column(name = "audio_visual")
-	private Double audioVisual = 2.5;
+	private Double audioVisual = null;
 	
 	@Column(name = "audio_visual_na")
 	private boolean audioVisualNA;
 	
 	@Column(name = "entrada_principal")
-	private Double entradaPrincipal = 2.5;
+	private Double entradaPrincipal = null;
 	
 	@Column(name = "entrada_principal_na")
 	private boolean entradaPrincipalNA;
 	
 	@Column(name = "banheiro_acessivel")
-	private Double banheiroAcessivel = 2.5;
+	private Double banheiroAcessivel = null;
 	
 	@Column(name = "banheiro_acessivel_na")
 	private boolean banheiroAcessivelNA;
