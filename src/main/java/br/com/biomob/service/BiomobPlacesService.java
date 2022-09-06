@@ -134,7 +134,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getCirculacaoInterna();
 				var b = evaluation.isCirculacaoInternaNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorCirculacao++;
 				}
 				
@@ -158,7 +158,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getEstacionamento();
 				var b = evaluation.isEstacionamentoNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorEstacionamento++;
 				}
 				
@@ -182,7 +182,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getCalcada();
 				var b = evaluation.isCalcadaNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorCalcada++;
 				}
 				
@@ -206,7 +206,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getAudioVisual();
 				var b = evaluation.isAudioVisualNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorAudioVisual++;
 				}
 				
@@ -230,7 +230,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getEntradaPrincipal();
 				var b = evaluation.isEntradaPrincipalNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorEntrada++;
 				}
 				
@@ -254,7 +254,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 				var a = evaluation.getBanheiroAcessivel();
 				var b = evaluation.isBanheiroAcessivelNA();
 				
-				if (a == 0 || a == 5) {
+				if (a == 1 || a == 5) {
 					contadorBanheiroAcessivel++;
 				}
 				
