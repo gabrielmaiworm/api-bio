@@ -306,6 +306,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			total = total + evaluation.getCirculacaoInterna();
 			
 		}
+		
 
 		DecimalFormat formato = new DecimalFormat("#.##");      
 		

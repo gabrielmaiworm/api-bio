@@ -65,37 +65,37 @@ public class Evaluation {
 	//private ValuesType accessibleBathroom; //banheiro acessivel - Resultados possiveis: YES | NO | NOT_APPLICABLE | NONE
 	
 	@Column(name = "circulacao_interna")
-	private Double circulacaoInterna; 
+	private Double circulacaoInterna = 2.5; 
 	
 	@Column(name = "circulacao_interna_na")
 	private boolean circulacaoInternaNA; 
 	
 	@Column(name = "estacionamento")
-	private Double estacionamento;
+	private Double estacionamento = 2.5;
 	
 	@Column(name = "estacionamento_na")
 	private boolean estacionamentoNA;
 	
 	@Column(name = "calcada")
-	private Double calcada;
+	private Double calcada = 2.5;
 	
 	@Column(name = "calcada_na")
 	private boolean calcadaNA;
 	
 	@Column(name = "audio_visual")
-	private Double audioVisual;
+	private Double audioVisual = 2.5;
 	
 	@Column(name = "audio_visual_na")
 	private boolean audioVisualNA;
 	
 	@Column(name = "entrada_principal")
-	private Double entradaPrincipal;
+	private Double entradaPrincipal = 2.5;
 	
 	@Column(name = "entrada_principal_na")
 	private boolean entradaPrincipalNA;
 	
 	@Column(name = "banheiro_acessivel")
-	private Double banheiroAcessivel;
+	private Double banheiroAcessivel = 2.5;
 	
 	@Column(name = "banheiro_acessivel_na")
 	private boolean banheiroAcessivelNA;
