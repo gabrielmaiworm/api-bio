@@ -288,7 +288,11 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			return null; 
 		}
 		
-		else {
+		else if(total == 0) {
+			return null;
+			
+		} else {
+		
 		
 		String average = String.valueOf(total / count);
 		
@@ -300,6 +304,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 		
 		int count = 0;
 		double total = 0;
+		
 		
 		for (Evaluation evaluation : biomobCirculacao) {
 			count++;
@@ -315,7 +320,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			return null; 
 		}
 		
-		else {
+		else if(total == 0) {
+			return null;
+			
+		} else {
 		
 		String average = String.valueOf(total / count);
 		
@@ -341,7 +349,11 @@ private Double estacionamentoAverageCalculator(List<Evaluation> biomobEstacionam
 			return null; 
 		}
 		
-		else {
+		else if(total == 0) {
+			return null;
+			
+		} else {
+		
 		
 		String average = String.valueOf(total / count);
 		
@@ -367,7 +379,11 @@ private Double calcadaAverageCalculator(List<Evaluation> biomobCalcada) {
 		return null; 
 	}
 	
-	else {
+	else if(total == 0) {
+		return null;
+		
+	} else {
+	
 	
 	String average = String.valueOf(total / count);
 	
@@ -393,7 +409,11 @@ private Double audioVisualAverageCalculator(List<Evaluation> biomobAudioVisual) 
 		return null; 
 	}
 	
-	else {
+	else if(total == 0) {
+		return null;
+		
+	} else {
+	
 	
 	String average = String.valueOf(total / count);
 	
@@ -419,7 +439,11 @@ private Double entradaAverageCalculator(List<Evaluation> biomobEntrada) {
 		return null; 
 	}
 	
-	else {
+	else if(total == 0) {
+		return null;
+		
+	} else {
+	
 	
 	String average = String.valueOf(total / count);
 	
@@ -445,7 +469,10 @@ private Double banheiroAverageCalculator(List<Evaluation> biomobBanheiro) {
 		return null; 
 	}
 	
-	else {
+	else if(total == 0) {
+		return null;
+		
+	} else {
 	
 	String average = String.valueOf(total / count);
 	
