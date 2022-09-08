@@ -142,8 +142,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorCirculacao == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorCirculacao) {
+			else if (contadorNA >= contadorCirculacao) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -166,8 +168,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorEstacionamento == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorEstacionamento) {
+			else if (contadorNA >= contadorEstacionamento) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -190,8 +194,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorCalcada == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorCalcada) {
+			else if (contadorNA >= contadorCalcada) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -214,8 +220,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorAudioVisual == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorAudioVisual) {
+			else if (contadorNA >= contadorAudioVisual) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -238,8 +246,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorEntrada == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorEntrada) {
+			else if (contadorNA >= contadorEntrada) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -262,8 +272,10 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 					contadorNA++;
 				}
 
+			} if (contadorNA == 0 && contadorBanheiroAcessivel == 0) {
+				return null;
 			}
-			if (contadorNA >= contadorBanheiroAcessivel) {
+			else if (contadorNA >= contadorBanheiroAcessivel) {
 				return 2.0;
 			} else {
 				return 1.0;
@@ -416,7 +428,6 @@ private Double audioVisualAverageCalculator(List<Evaluation> biomobAudioVisual) 
 				count++;
 				total = total + evaluation.getEntradaPrincipal();
 			}
-			
 			
 		}
 
