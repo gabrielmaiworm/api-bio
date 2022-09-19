@@ -25,6 +25,12 @@ public class User {
 	@Column(name = "telefone")
 	private String telefone;
 	
+	@Column(name = "genero")
+	private String genero;
+	
+	@Column(name = "data_nascimento")
+	private String dataNascimento;
+	
 	@Column(name = "deficiencia")
 	private String deficiencia;
 	
