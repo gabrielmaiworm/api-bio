@@ -28,8 +28,14 @@ public class Evento {
 	@Column(name = "descricao")
 	private String descricao; //descrição da vaga
 
-	@Column(name = "horario")
-	private String horario; //Horario de trabalho
+	@Column(name = "horario_inicio")
+	private String horarioInicio; //Horario de trabalho
+	
+	@Column(name = "horario_fim")
+	private String horarioFim; //Horario de trabalho
+	
+	@Column(name = "data")
+	private String data; //Horario de trabalho
 
 	@Column(columnDefinition="TEXT" ,name = "foto")
 	private String foto;
