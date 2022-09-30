@@ -23,7 +23,7 @@ public class Evento {
 	private String local; //Local do trabalho
 	
 	@Column(name = "site")
-	private String empresa; //Nome da empresa
+	private String site; //Nome da empresa
 	
 	@Column(name = "descricao")
 	private String descricao; //descrição da vaga
