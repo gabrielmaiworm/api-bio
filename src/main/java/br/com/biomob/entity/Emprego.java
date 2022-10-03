@@ -1,5 +1,7 @@
 package br.com.biomob.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -30,6 +32,15 @@ public class Emprego {
 	
 	@Column(name = "descricao")
 	private String descricao; //descrição da vaga
+	
+	@Column(name = "link")
+	private String link; //descrição da vaga
+	
+	@Column(name = "data_inicio")
+	private Date dataInicio; //descrição da vaga
+	
+	@Column(name = "data_fim")
+	private Date dataFim; //descrição da vaga
 	
 	@Column(columnDefinition="TEXT" ,name = "logo")
 	private String logo;
