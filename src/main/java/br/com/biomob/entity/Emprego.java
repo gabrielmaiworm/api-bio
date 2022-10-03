@@ -16,9 +16,6 @@ public class Emprego {
 	@Column(name = "emprego_id")
 	private String empregoId; //id do emprego
 	
-	@Column(name = "nome")
-	private String nome; //Nome da função
-	
 	@Column(name = "local")
 	private String local; //Local do trabalho
 	
@@ -34,11 +31,8 @@ public class Emprego {
 	@Column(name = "descricao")
 	private String descricao; //descrição da vaga
 	
-	@Column(name = "beneficios")
-	private String beneficios; //Beneficios dados
-	
-	@Column(name = "horarios")
-	private String horarios; //Horario de trabalho
+	@Column(columnDefinition="TEXT" ,name = "logo")
+	private String logo;
 	
 	@Column(name = "regime_contratacao")
 	private String regimeContratacao; //Regime de contratação - CLT,PJ
