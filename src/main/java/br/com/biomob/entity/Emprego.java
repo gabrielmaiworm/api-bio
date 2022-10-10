@@ -28,24 +28,21 @@ public class Emprego {
 	private String salario; //Salário
 	
 	@Column(name = "empresa")
-	private String empresa; //Nome da empresa
+	private String empresa; 
 	
 	@Column(name = "descricao")
-	private String descricao; //descrição da vaga
+	private String descricao; 
 	
 	@Column(name = "link")
-	private String link; //descrição da vaga
+	private String link; 
 	
-	@Column(name = "data_inicio")
-	private Date dataInicio; //descrição da vaga
-	
-	@Column(name = "data_fim")
-	private Date dataFim; //descrição da vaga
+	@Column(name = "data_exclusao")
+	private Date dataExclusao; 
 	
 	@Column(columnDefinition="TEXT" ,name = "logo")
 	private String logo;
 	
-	@Column(name = "regime_contratacao")
-	private String regimeContratacao; //Regime de contratação - CLT,PJ
+	@Column(name = "tipo")  // Remoto, hibrido, presencial
+	private String tipo; 
 		
 }
