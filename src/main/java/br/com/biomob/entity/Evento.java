@@ -14,28 +14,28 @@ public class Evento {
 
 	@Id
 	@Column(name = "evento_id")
-	private String eventoId; //id do emprego
+	private String eventoId; 
 	
 	@Column(name = "nome")
-	private String nome; //Nome da função
+	private String nome; 
 	
 	@Column(name = "local")
-	private String local; //Local do trabalho
+	private String local; 
 	
 	@Column(name = "site")
-	private String site; //Nome da empresa
+	private String site; 
 	
 	@Column(name = "descricao")
-	private String descricao; //descrição da vaga
+	private String descricao; 
 
 	@Column(name = "horario_inicio")
-	private String horarioInicio; //Horario de trabalho
+	private String horarioInicio; 
 	
 	@Column(name = "horario_fim")
-	private String horarioFim; //Horario de trabalho
+	private String horarioFim; 
 	
 	@Column(name = "data")
-	private String data; //Horario de trabalho
+	private String data; 
 
 	@Column(columnDefinition="TEXT" ,name = "foto")
 	private String foto;
