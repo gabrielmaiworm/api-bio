@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "avaliacao_estacionamento")
+@Table(name = "biomob_plus_avaliacao_estacionamento")
 public class AvaliacaoEstacionamento {
 	
 	@Id
