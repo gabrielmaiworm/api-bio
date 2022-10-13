@@ -33,7 +33,10 @@ public class Estacionamento {
 	@Column(name = "tipo_vaga")
 	private String tipoVaga;
 	
-	@Column(name = "avaliacao")
-	private String avaliacao;
+	@Column(name = "qntd_vagas")
+	private Integer qntdVagas;
 	
+	@Column(name = "detalhes")
+	private String detalhes;
+
 }
