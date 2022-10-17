@@ -21,9 +21,6 @@ public class Estacionamento {
 	@Column(name = "endereco")
 	private String endereco;
 	
-	@Column(name = "cep")
-	private String cep;
-	
 	@Column(name = "latitude")
 	private Double latitude;
 	
