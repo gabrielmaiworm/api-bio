@@ -33,8 +33,14 @@ public class AvaliacaoEstacionamento {
 	@Column(name= "user_image")
 	private String user_image; 
 	
-	@Column(name = "avaliacao")
-	private String avaliacao; 
+	@Column(name = "vaga_adequada")
+	private String vagaAdequada; 
+	
+	@Column(name = "vaga_inadequada")
+	private String vagaInadequada;
+
+	@Column(name = "vaga_inexistente")
+	private String vagaInexistente; 
 	
 	@Column(name = "motivo_inadequada")
 	private String motivoInadequada; 

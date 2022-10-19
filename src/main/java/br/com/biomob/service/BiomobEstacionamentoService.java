@@ -27,7 +27,11 @@ public class BiomobEstacionamentoService implements IAvaliacaoEstacionamentoServ
 		EstacionamentoFields  estacionamentoFields = new EstacionamentoFields();
 		
 		
-		estacionamentoFields.setAvaliacao(avaliacaoField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		estacionamentoFields.setVagaAdequada(vagaAdequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		
+		estacionamentoFields.setVagaInexistente(vagaInexistenteField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		
+		estacionamentoFields.setVagaInadequada(vagaInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
 		estacionamentoFields.setMotivoInadequada(motivoInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
@@ -40,11 +44,22 @@ public class BiomobEstacionamentoService implements IAvaliacaoEstacionamentoServ
 		return toEstacionamentoFields();
 	}
 	
-	private String avaliacaoField(List<AvaliacaoEstacionamento> avaliacao) {
+	private String vagaAdequadaField(List<AvaliacaoEstacionamento> vagaAdequada) {
 
-		return avaliacaoEstacionamento.getAvaliacao();
+		return avaliacaoEstacionamento.getVagaAdequada();
 	}
 	
+	private String vagaInadequadaField(List<AvaliacaoEstacionamento> vagaInadequada) {
+
+		return avaliacaoEstacionamento.getVagaInadequada();
+	}
+	
+	private String vagaInexistenteField(List<AvaliacaoEstacionamento> vagaInexistente) {
+
+		return avaliacaoEstacionamento.getVagaInexistente();
+	}
+	
+
 	private String motivoInadequadaField(List<AvaliacaoEstacionamento> motivoInadequada) {
 		
 		return avaliacaoEstacionamento.getMotivoInadequada();
