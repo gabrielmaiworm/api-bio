@@ -29,11 +29,15 @@ public class BiomobEstacionamentoService implements IAvaliacaoEstacionamentoServ
 		
 		estacionamentoFields.setVagaAdequada(vagaAdequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
-		estacionamentoFields.setVagaInexistente(vagaInexistenteField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		estacionamentoFields.setAusenciaSinalizacao(ausenciaSinalizacaoField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
-		estacionamentoFields.setVagaInadequada(vagaInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		estacionamentoFields.setSinalizacaoInadequada(sinalizacaoInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
-		estacionamentoFields.setMotivoInadequada(motivoInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		estacionamentoFields.setImpossivelUtilizacao(impossivelUtilizacaoField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		
+		estacionamentoFields.setOutrosInadequada(outrosInadequadaField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
+		
+		estacionamentoFields.setInexistente(inexistenteField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
 		estacionamentoFields.setComentario(comentarioField(estacionamentoFields.getBiomobAvaliacaoEstacionamento()));
 		
@@ -44,25 +48,35 @@ public class BiomobEstacionamentoService implements IAvaliacaoEstacionamentoServ
 		return toEstacionamentoFields();
 	}
 	
-	private String vagaAdequadaField(List<AvaliacaoEstacionamento> vagaAdequada) {
+	private Boolean ausenciaSinalizacaoField(List<AvaliacaoEstacionamento> ausenciaSinalizacao) {
+
+		return avaliacaoEstacionamento.getAusenciaSinalizacao();
+	}
+	
+	private Boolean vagaAdequadaField(List<AvaliacaoEstacionamento> vagaAdequada) {
 
 		return avaliacaoEstacionamento.getVagaAdequada();
 	}
 	
-	private String vagaInadequadaField(List<AvaliacaoEstacionamento> vagaInadequada) {
+	private Boolean sinalizacaoInadequadaField(List<AvaliacaoEstacionamento> sinalizacaoInadequada) {
 
-		return avaliacaoEstacionamento.getVagaInadequada();
-	}
-	
-	private String vagaInexistenteField(List<AvaliacaoEstacionamento> vagaInexistente) {
-
-		return avaliacaoEstacionamento.getVagaInexistente();
+		return avaliacaoEstacionamento.getSinalizacaoInadequada();
 	}
 	
 
-	private String motivoInadequadaField(List<AvaliacaoEstacionamento> motivoInadequada) {
+	private Boolean impossivelUtilizacaoField(List<AvaliacaoEstacionamento> impossivelUtilizacao) {
 		
-		return avaliacaoEstacionamento.getMotivoInadequada();
+		return avaliacaoEstacionamento.getImpossivelUtilizacao();
+	}
+
+	private Boolean outrosInadequadaField(List<AvaliacaoEstacionamento> outrosInadequada) {
+		
+		return avaliacaoEstacionamento.getOutrosInadequada();
+	}
+
+	private Boolean inexistenteField(List<AvaliacaoEstacionamento> inexistente) {
+		
+		return avaliacaoEstacionamento.getInexistente();
 	}
 	
 	private String comentarioField(List<AvaliacaoEstacionamento> comentario) {

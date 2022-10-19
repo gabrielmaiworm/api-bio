@@ -11,13 +11,17 @@ public class EstacionamentoFields {
 
 	private List<AvaliacaoEstacionamento> biomobAvaliacaoEstacionamento = new ArrayList<>();
 	
-	private String vagaAdequada;
+	private Boolean vagaAdequada;
 	
-	private String vagaInadequada;
+	private Boolean ausenciaSinalizacao;
 	
-	private String vagaInexistente;
+	private Boolean sinalizacaoInadequada;
 	
-	private String motivoInadequada;
+	private Boolean impossivelUtilizacao;
+
+	private Boolean outrosInadequada;
+	
+	private Boolean inexistente;
 	
 	private String comentario;
 	

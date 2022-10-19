@@ -34,16 +34,22 @@ public class AvaliacaoEstacionamento {
 	private String user_image; 
 	
 	@Column(name = "vaga_adequada")
-	private String vagaAdequada; 
+	private Boolean vagaAdequada; 
 	
-	@Column(name = "vaga_inadequada")
-	private String vagaInadequada;
+	@Column(name = "ausencia_sinalizacao")
+	private Boolean ausenciaSinalizacao;
 
-	@Column(name = "vaga_inexistente")
-	private String vagaInexistente; 
+	@Column(name = "sinalizacao_inadequada")
+	private Boolean sinalizacaoInadequada; 
 	
-	@Column(name = "motivo_inadequada")
-	private String motivoInadequada; 
+	@Column(name = "impossivel_utilizacao")
+	private Boolean impossivelUtilizacao; 
+
+	@Column(name = "outros_inadequada")
+	private Boolean outrosInadequada;
+
+	@Column(name = "inexistente")
+	private Boolean inexistente; 
 	
 	@Column(name = "comentario")
 	private String comentario; 
