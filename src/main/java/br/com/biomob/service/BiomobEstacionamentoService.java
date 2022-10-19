@@ -48,33 +48,33 @@ public class BiomobEstacionamentoService implements IAvaliacaoEstacionamentoServ
 		return toEstacionamentoFields();
 	}
 	
-	private Boolean ausenciaSinalizacaoField(List<AvaliacaoEstacionamento> ausenciaSinalizacao) {
+	private String ausenciaSinalizacaoField(List<AvaliacaoEstacionamento> ausenciaSinalizacao) {
 
 		return avaliacaoEstacionamento.getAusenciaSinalizacao();
 	}
 	
-	private Boolean vagaAdequadaField(List<AvaliacaoEstacionamento> vagaAdequada) {
+	private String vagaAdequadaField(List<AvaliacaoEstacionamento> vagaAdequada) {
 
 		return avaliacaoEstacionamento.getVagaAdequada();
 	}
 	
-	private Boolean sinalizacaoInadequadaField(List<AvaliacaoEstacionamento> sinalizacaoInadequada) {
+	private String sinalizacaoInadequadaField(List<AvaliacaoEstacionamento> sinalizacaoInadequada) {
 
 		return avaliacaoEstacionamento.getSinalizacaoInadequada();
 	}
 	
 
-	private Boolean impossivelUtilizacaoField(List<AvaliacaoEstacionamento> impossivelUtilizacao) {
+	private String impossivelUtilizacaoField(List<AvaliacaoEstacionamento> impossivelUtilizacao) {
 		
 		return avaliacaoEstacionamento.getImpossivelUtilizacao();
 	}
 
-	private Boolean outrosInadequadaField(List<AvaliacaoEstacionamento> outrosInadequada) {
+	private String outrosInadequadaField(List<AvaliacaoEstacionamento> outrosInadequada) {
 		
 		return avaliacaoEstacionamento.getOutrosInadequada();
 	}
 
-	private Boolean inexistenteField(List<AvaliacaoEstacionamento> inexistente) {
+	private String inexistenteField(List<AvaliacaoEstacionamento> inexistente) {
 		
 		return avaliacaoEstacionamento.getInexistente();
 	}
