@@ -22,6 +22,9 @@ public class Locais {
 	@Column(name = "nota")
 	private String nota;
 	
+	@Column(name = "token")
+	private String token;
+	
 	@Column(name = "haschairwheel")
 	private Boolean haschairwheel;
 	

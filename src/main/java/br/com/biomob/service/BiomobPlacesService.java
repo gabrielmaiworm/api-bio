@@ -116,6 +116,7 @@ public class BiomobPlacesService implements IBiomobPlacesService{
 			
 			place.setBiomobAudioVisualCount(audioVisualCount(place.getBiomobEvaluation()));
 			
+			place.setToken(googleResponse.getNext_page_token());
 			
 			biomobPlacesReturn.getPlaces().add(place);
 		}

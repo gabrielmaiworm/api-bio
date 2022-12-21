@@ -39,5 +39,7 @@ public class Place {
 	private Double biomobEntradaCount;
 	
 	private Double biomobBanheiroCount;
+	
+	private String token;
 
 }
